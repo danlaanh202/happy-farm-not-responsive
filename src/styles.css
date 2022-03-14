@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --blue-text-shadow: #1b92e5;
+  --primary-blue: #6fb7e9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  object-fit: cover;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  width: 1920px;
+  background-image: url("./assets/WebsiteModule/Background/MainBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+  /* display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; */
+}
+.header-top {
+  width: 1800px;
+  height: 524px;
+  border-radius: 100px;
+  background-color: #97caee;
+  position: absolute;
+  top: -435px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(4px 6.928px 8px rgba(0, 0, 0, 0.1));
+  z-index: 1000;
+}
+.header-logo {
+  position: absolute;
+  bottom: -85px;
+  left: 40px;
+  cursor: pointer;
+}
+.header-img:hover {
+  animation: shake 0.5s infinite;
+}
+
+.header-items {
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-55%);
+  bottom: 20px;
+}
+.header-item {
+  font-size: 33px;
+  letter-spacing: -1px;
+  line-height: 43px;
+  font-family: "Baloo Bhaijaan", cursive;
+  text-align: center;
+  -webkit-text-stroke: 2px var(--blue-text-shadow);
+  color: white;
+  text-shadow: 3px 2px var(--blue-text-shadow);
+}
+.header-button {
+  position: absolute;
+  bottom: -80px;
+  right: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+.header-button:hover {
+  animation: shake 0.5s infinite;
+}
+.banner {
+  padding-top: 160px;
+  position: relative;
+}
+.banner-beta {
+}
+.banner-title-beta {
+  position: absolute;
+  top: 420px;
+  left: 200px;
+}
+.introduce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+.introduce-connect {
+  z-index: 1;
+}
+.introduce-cloud {
+  position: absolute;
+  z-index: -3;
+  top: 135px;
+  max-width: 100vw;
+}
+.introduce-text-container {
+  width: calc(100vw - 420px);
+  margin-top: 40px;
+}
+.introduce-text-h3,
+.introduce-text-description {
+  font-family: "Baloo Bhaijaan";
+}
+.introduce-text-h3 {
+  font-size: 69px;
+  letter-spacing: -2px;
+  line-height: 90px;
+  -webkit-text-stroke: 1px var(--blue-text-shadow);
+  color: white;
+  text-shadow: 3px 2px var(--blue-text-shadow);
+  text-align: left;
+}
+.introduce-text-description {
+  font-size: 46px;
+  line-height: 60px;
+  color: #155da8;
+  font-family: "Baloo Bhaijaan";
+  margin: 50px 10px;
+  letter-spacing: 1px;
+}
+.feature-introduction {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  flex-direction: column;
+  align-items: center;
+}
+.feature-img {
+}
+.feature-description {
+  width: 1656px;
+  height: 276px;
+  font-size: 50px;
+  color: #ffffff;
+  font-family: "Baloo Bhaijaan";
+  text-align: center;
+  margin: 55px 0;
+}
+.feature-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.carousel-controller {
+  width: 100%;
+  margin: 105px 0;
+}
+.carousel-controller-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.carousel-controller-item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3c97f5;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel-controller-item.active {
+  background-color: white;
+}
+.not-responsive {
+  position: absolute;
+  display: none;
+}
+.nft-items-container {
+  background-image: url(./assets/WebsiteModule/Background/CLOUDNFT\ Item.png);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 320px;
+}
+.nft-items-headline {
+  margin-top: 45px;
+}
+
+.nft-item-container {
+  width: 85%;
+  display: flex;
+  margin-top: 55px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.nft-item-tree {
+  z-index: 5;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nft-item-tree-effect {
+  position: absolute;
+  left: -135px;
+  z-index: 0;
+  border-radius: 50%;
+}
+.nft-items-container:hover .nft-item-tree-effect {
+  animation: spin 20s linear infinite;
+}
+
+.nft-seed-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 20px;
+  z-index: 2;
+}
+.nft-seed-img {
+  cursor: pointer;
+}
+.how-to-earn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  flex-direction: column;
+}
+.how-to-earn-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 120px);
+}
+.how-to-earn-text {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.icon-btn {
+  cursor: pointer;
+}
+.how-to-earn-description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.how-to-earn-description-text-container {
+  display: flex;
+  align-items: center;
+}
+.how-to-earn-description-text {
+  font-size: 31px;
+  color: #ffffff;
+  font-family: "Baloo Bhaijaan";
+}
+.how-to-earn-description-token {
+  margin-right: 10px;
+}
+.transparent {
+  opacity: 0;
+}
+.game-activities-container {
+  margin-top: 275px;
+  background-image: url("./assets/WebsiteModule/Background/CLOUDGameActivities.png");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 500px;
+}
+.game-activities-headline {
+  margin-top: -100px;
+}
+.game-activities-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+}
+.game-activities-items {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 40px;
+  height: 785px;
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opactity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.game-activities-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  animation: appear 0.5s linear;
+  max-width: 350px;
+}
+.game-activities-img {
+}
+.game-activities-title {
+  font-size: 65px;
+  letter-spacing: -2px;
+  line-height: 57px;
+  font-family: "Baloo Bhaijaan";
+  text-align: center;
+  margin-top: 20px;
+  min-height: 114px;
+  -webkit-text-stroke: 1.5px #c62e00;
+  color: #fbb035;
+}
+.game-activities-description {
+  font-size: 25px;
+  line-height: 32px;
+  color: #155da8;
+  font-family: "Baloo Bhaijaan";
+  margin-top: 10px;
+  min-height: 320px;
+}
+.game-activities-btn {
+  margin: 0 20px;
+  transform: translateY(-35px);
+  cursor: pointer;
+}
+.tokenomics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.tokenomics-headline {
+  margin-bottom: 50px;
+}
+.tokenomics-data-analyst {
+  width: calc(100% - 360px);
+  height: calc(926px - 50px);
+  border: 7px solid var(--blue-text-shadow);
+  border-radius: 20px;
+  filter: drop-shadow(0px 5px 0px rgba(0, 0, 0, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  position: relative;
+}
+.tokenomics-data-infomation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.tokenomics-data-title {
+  font-size: 54px;
+  color: #155da8;
+  font-family: "Baloo Bhaijaan";
+}
+.tokenomics-data-description {
+  font-size: 28px;
+  color: #155da8;
+  font-family: "Baloo Bhaijaan";
+  line-height: 45px;
+}
+.tokenomics-cloud {
+  position: absolute;
+  bottom: -150px;
+  right: -195px;
+}
+
+/* animation  with rabbit cloud*/
+.tokenomics-container:hover .tokenomics-cloud {
+  animation: shake 0.5s infinite;
+}
+
+.core-team-container {
+  background-image: url("./assets/WebsiteModule/Background/CLOUDCore\ Team.png");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 260px;
+  position: relative;
+  width: 100%;
+}
+
+.core-team-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 100px);
+}
+.core-team-slider {
+  display: flex;
+  width: 1626px;
+  height: 550px;
+  overflow-x: hidden;
+}
+.core-team {
+  display: flex;
+}
+.core-team-card {
+  margin: 0 35px;
+  width: 336.5px;
+  height: 500px;
+  border-radius: 120px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+  box-shadow: 0 7px 15px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.5s linear;
+}
+.core-team-avatar {
+  width: 80%;
+}
+.core-team-name {
+  width: 70%;
+  font-size: 60px;
+  line-height: 57px;
+  color: #46b5fa;
+  font-family: "Baloo Bhaijaan";
+  text-align: center;
+  filter: drop-shadow(1px 1.732px 1px rgba(0, 0, 0, 0.38));
+}
+.core-team-btn {
+  cursor: pointer;
+  z-index: 5;
+}
+.core-team-controller {
+  width: 100%;
+  margin: 50px 0;
+}
+.core-team-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.core-team-item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3c97f5;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.core-active {
+  background-color: #ff2930;
+}
+.roadmap-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 260px;
+}
+.roadmap-headline {
+}
+.roadmap-items {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 65px;
+}
+.roadmap-item {
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  height: 500px;
+  background: white;
+  align-items: center;
+  padding-top: 110px;
+  border-radius: 120px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.roadmap-date {
+  font-size: 61px;
+  line-height: 58px;
+  color: #46b5fa;
+  font-family: "Baloo Bhaijaan";
+  text-align: center;
+  filter: drop-shadow(1px 1.732px 1px rgba(0, 0, 0, 0.38));
+  font-weight: 400;
+  margin-bottom: 50px;
+  z-index: 2;
+}
+.roadmap-detail-list {
+  font-size: 18px;
+  color: #333333;
+  font-family: "Baloo Bhaijaan";
+  margin-left: 50px;
+  margin-right: 5px;
+  z-index: 2;
+}
+.roadmap-detail-item {
+}
+.roadmap-index {
+  position: absolute;
+  font-size: 489px;
+  line-height: 461px;
+  color: #f9d60f;
+  font-family: "Baloo Bhaijaan";
+  left: -55px;
+  top: 0;
+  z-index: 0;
+}
+.partners-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/WebsiteModule/Background/CLOUDPartnersAndBackers.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 300px;
+}
+.partners-headline {
+  margin-top: -115px;
+  margin-bottom: 40px;
+}
+.sponsors-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  column-gap: 50px;
+  row-gap: 35px;
+}
+.sponsor-container {
+  width: 310px;
+  height: 115px;
+  border-radius: 20px;
+  border: 2px solid #7da6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sponsor-logo {
+  display: block;
+  margin: auto;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 180px;
+  background-image: url("./assets/WebsiteModule/Footer/CloudsFooter.png");
+}
+.footer-logo {
+}
+.footer-link-container {
+  margin-top: 80px;
+}
+.footer-link {
+  margin: 0 5px;
+}
+.footer-link-logo:hover {
+  transform: scale(1.2);
+}
+.go-up-btn {
+  display: none;
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+}
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+@media screen and (max-width: 1919px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .not-responsive {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+  }
+  .not-responsive h1 {
+    font-size: 80px;
+    font-family: "Baloo Bhaijaan", cursive;
+  }
+}
+@media screen and (min-width: 1925px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .not-responsive {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+  }
+  .not-responsive h1 {
+    font-size: 80px;
+    font-family: "Baloo Bhaijaan", cursive;
+  }
+}
